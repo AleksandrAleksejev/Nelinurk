@@ -6,15 +6,15 @@ namespace Nelinurk
     {
         static void Main(string[] args)
         {
-            int a;
-            int b;
+            int Korgus;
+            int Laius;
 
-            Console.WriteLine("Sisesta a");
-            a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Sisesta b");
-            b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Sisesta Korgus ");
+            Korgus = int.Parse(Console.ReadLine());
+            Console.WriteLine("Sisesta Laius ");
+            Laius = int.Parse(Console.ReadLine());
 
-            Nelinurk N = new Nelinurk(a, b);
+            Nelinurk N = new Nelinurk(Korgus, Laius);
             N.Vastus();
             Console.ReadKey();
 

@@ -5,37 +5,37 @@ using System.Text;
 namespace Nelinurk
 {
     class Nelinurk
-    {
-        string tüüp;
+    {//поля
+        string tuup;
         int status;
         double kõrgus;
         double laius;
-        public Nelinurk() { }
-        public Nelinurk(double Kõrgus, double Laius)
+        public Nelinurk() { }//пустой конструктор 
+        public Nelinurk(double Kõrgus, double Laius)//конструктор 
         {
             kõrgus = Kõrgus;
             laius = Laius;
         }
-        public string Tüüp
+        public string Tuup
         {
             get
             {
                 if (kõrgus == laius || status != 90)
                 {
-                    tüüp = "Romb";
+                    tuup = "Romb";
                 }
                 else if (kõrgus == laius || status == 90)
                 {
-                    tüüp = "Ruut";
+                    tuup = "Ruut";
                 }
                 else
                 {
-                    tüüp = "ristkülik";
+                    tuup = "Ristkülik";
                 }
-                return tüüp;
+                return tuup;
             }
         }
-        public int Status
+        public int Status//Св-во
         {
             set { }
             get { return status; }
@@ -52,7 +52,7 @@ namespace Nelinurk
             P = (kõrgus + laius) * 2;
             return P;
         }
-        public void Vastus()
+        public void Vastus()//Метод
         {
             Console.WriteLine($"S = {S}"); //площадь
             Console.WriteLine($"P = {P}"); //периметр 
