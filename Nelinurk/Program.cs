@@ -8,13 +8,15 @@ namespace Nelinurk
         {
             int Korgus;
             int Laius;
+            
+
 
             Console.WriteLine("Sisesta Korgus ");
             Korgus = int.Parse(Console.ReadLine());
             Console.WriteLine("Sisesta Laius ");
             Laius = int.Parse(Console.ReadLine());
 
-            Nelinurk N = new Nelinurk(Korgus, Laius);
+            Nelinurk N = new Nelinurk(Korgus,Laius);
             N.Vastus();
             Console.ReadKey();
 

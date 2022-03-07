@@ -8,23 +8,23 @@ namespace Nelinurk
     {//поля
         string tuup;
         int status;
-        double kõrgus;
+        double korgus;
         double laius;
         public Nelinurk() { }//пустой конструктор 
-        public Nelinurk(double Kõrgus, double Laius)//конструктор 
+        public Nelinurk(double Korgus, double Laius)//конструктор 
         {
-            kõrgus = Kõrgus;
+            korgus = Korgus;
             laius = Laius;
         }
         public string Tuup
         {
             get
             {
-                if (kõrgus == laius || status != 90)
+                if (korgus == laius && status != 90)
                 {
                     tuup = "Romb";
                 }
-                else if (kõrgus == laius || status == 90)
+                else if (korgus == laius && status == 90)
                 {
                     tuup = "Ruut";
                 }
@@ -37,25 +37,27 @@ namespace Nelinurk
         }
         public int Status//Св-во
         {
-            set { }
             get { return status; }
+            set { }
         }
         public double Pindala()
         {
-            double S = 0;
-            S = kõrgus * laius;
-            return S;
+            double pindala;
+            pindala = korgus * laius;
+            return pindala;
         }
         public double Perimeeter() // 
         {
-            double P = 0;
-            P = (kõrgus + laius) * 2;
-            return P;
+            double perimeeter;
+            perimeeter = (korgus + laius) * 2;
+            return perimeeter;
         }
+
         public void Vastus()//Метод
         {
-            Console.WriteLine($"S = {S}"); //площадь
-            Console.WriteLine($"P = {P}"); //периметр 
+            Console.WriteLine("Tuup = {0}",Tuup);//тип
+            //Console.WriteLine($"S = {Pindala}"); //площадь
+            //Console.WriteLine($"P = {Perimeeter}"); //периметр 
         }
     }
 }
